@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://DeffendersButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://AttackersButtons.tscn" type="PackedScene" id=3]
+[ext_resource path="res://RunBattkeButtons.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MainScene.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 276.74, 18.9538 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[node name="MainScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuUI" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuUI"]
+margin_left = 377.0
+margin_right = 903.0
+margin_bottom = 52.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 1, 0.976471, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 1 )
+text = "CONQUEST of NATIONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="MenuUI/Label"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MenuUI/Label/Area2D"]
+position = Vector2( 281.176, 27.2281 )
+shape = SubResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuUI"]
+margin_top = 56.0
+margin_right = 1280.0
+margin_bottom = 681.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MenuUI/HBoxContainer"]
+margin_left = 540.0
+margin_top = 172.0
+margin_right = 740.0
+margin_bottom = 452.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Attackers" parent="MenuUI/HBoxContainer/ButtonContainer" instance=ExtResource( 3 )]
+
+[node name="Deffender" parent="MenuUI/HBoxContainer/ButtonContainer" instance=ExtResource( 2 )]
+margin_top = 110.0
+margin_bottom = 170.0
+
+[node name="RunBattle" parent="MenuUI/HBoxContainer/ButtonContainer" instance=ExtResource( 4 )]
+margin_top = 220.0
+margin_bottom = 280.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUI"]
+margin_top = 685.0
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_constants/separation = 0
+
+[node name="QuoteRand" type="Label" parent="MenuUI/VBoxContainer"]
+margin_left = 640.0
+margin_right = 640.0
+margin_bottom = 21.0
+size_flags_horizontal = 4
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 3 )
+
+[node name="Label" type="Label" parent="MenuUI/VBoxContainer"]
+margin_top = 21.0
+margin_right = 1280.0
+margin_bottom = 35.0
+
+[connection signal="mouse_entered" from="MenuUI/Label" to="MenuUI/Label" method="_on_Label_mouse_entered"]
+[connection signal="mouse_exited" from="MenuUI/Label" to="MenuUI/Label" method="_on_Label_mouse_exited"]
+[connection signal="pressed" from="MenuUI/HBoxContainer/ButtonContainer/RunBattle" to="MenuUI/HBoxContainer/ButtonContainer/RunBattle" method="_on_RunBattle_pressed"]

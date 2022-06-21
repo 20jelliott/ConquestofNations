@@ -1,0 +1,351 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://DeffendersPlace.gd" type="Script" id=1]
+[ext_resource path="res://LandUnitsLabel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Clubman.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Musketeer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Myusketeer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://InfantryButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MechInfantry.tscn" type="PackedScene" id=7]
+[ext_resource path="res://RangedUnitLabel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ballistra.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ArtilleryPieceButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://CannonButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://AirUnitsLabel.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Planelvl1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Planelvl2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Bomberlvl1.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Bomberlvl2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://NavelUnitsLabel.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Iron-CladButton.tscn" type="PackedScene" id=18]
+[ext_resource path="res://BattleShiplvl1.tscn" type="PackedScene" id=19]
+[ext_resource path="res://BattleShiplvl2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://BackButton.tscn" type="PackedScene" id=21]
+[ext_resource path="res://PlusButton.tscn" type="PackedScene" id=22]
+[ext_resource path="res://PlusMinusLabel.tscn" type="PackedScene" id=23]
+[ext_resource path="res://MinusButton.tscn" type="PackedScene" id=24]
+[ext_resource path="res://UnitsTexture.tscn" type="PackedScene" id=25]
+[ext_resource path="res://icon.png" type="Texture" id=26]
+[ext_resource path="res://ResetAllButton.tscn" type="PackedScene" id=27]
+[ext_resource path="res://SelectSomeThing.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Anti-AirButton.tscn" type="PackedScene" id=29]
+[ext_resource path="res://FortificationLabel.tscn" type="PackedScene" id=30]
+[ext_resource path="res://PreAncientEraTownButton.tscn" type="PackedScene" id=31]
+[ext_resource path="res://PreAncientEraCityButton.tscn" type="PackedScene" id=32]
+[ext_resource path="res://AncientEraTown.tscn" type="PackedScene" id=33]
+[ext_resource path="res://AncientEraCity.tscn" type="PackedScene" id=34]
+[ext_resource path="res://MedievalEraTown.tscn" type="PackedScene" id=35]
+[ext_resource path="res://MedievalEraCity.tscn" type="PackedScene" id=36]
+[ext_resource path="res://IndustrialEraTown.tscn" type="PackedScene" id=37]
+[ext_resource path="res://IndustrialEraCity.tscn" type="PackedScene" id=38]
+[ext_resource path="res://ModernEraTown.tscn" type="PackedScene" id=41]
+[ext_resource path="res://ModernEraCity.tscn" type="PackedScene" id=42]
+[ext_resource path="res://ContemporaryEraCity.tscn" type="PackedScene" id=43]
+[ext_resource path="res://ContemporaryEraTown.tscn" type="PackedScene" id=44]
+[ext_resource path="res://InformationEraCity.tscn" type="PackedScene" id=45]
+[ext_resource path="res://InformationEraTown.tscn" type="PackedScene" id=46]
+[ext_resource path="res://BonusLabel.tscn" type="PackedScene" id=47]
+[ext_resource path="res://WallOfChinaButton.tscn" type="PackedScene" id=48]
+[ext_resource path="res://RomanBonusButton.tscn" type="PackedScene" id=49]
+
+[node name="DeffendersPlace" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_right = 639.0
+margin_bottom = 720.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_left = 209.0
+margin_right = 418.0
+margin_bottom = 1908.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+custom_constants/separation = 30
+
+[node name="LandUnitsLabel" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 2 )]
+margin_left = 58.0
+margin_right = 150.0
+
+[node name="Clubman" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 51.0
+margin_right = 209.0
+margin_bottom = 72.0
+
+[node name="Swordman" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 102.0
+margin_right = 209.0
+margin_bottom = 123.0
+
+[node name="MusketterButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 153.0
+margin_right = 209.0
+margin_bottom = 174.0
+
+[node name="InfantryButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
+margin_top = 204.0
+margin_right = 209.0
+margin_bottom = 225.0
+
+[node name="MechInfantryButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 255.0
+margin_right = 209.0
+margin_bottom = 276.0
+
+[node name="RangedUnitLabel" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 8 )]
+margin_left = 23.0
+margin_right = 185.0
+
+[node name="BallistraButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 9 )]
+margin_top = 357.0
+margin_right = 209.0
+margin_bottom = 378.0
+
+[node name="CannonButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 11 )]
+margin_top = 408.0
+margin_right = 209.0
+margin_bottom = 429.0
+
+[node name="ArtilleryPieceButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 10 )]
+margin_top = 459.0
+margin_right = 209.0
+margin_bottom = 480.0
+
+[node name="Anti-AirButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 29 )]
+margin_top = 510.0
+margin_right = 209.0
+margin_bottom = 531.0
+
+[node name="AirUnitsLabel" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 12 )]
+margin_left = 67.0
+margin_top = 561.0
+margin_right = 142.0
+margin_bottom = 582.0
+
+[node name="Planelvl1Button" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 13 )]
+margin_top = 612.0
+margin_right = 209.0
+margin_bottom = 633.0
+
+[node name="Planelvl2Button" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 14 )]
+margin_top = 663.0
+margin_right = 209.0
+margin_bottom = 684.0
+
+[node name="Bomberlvl1Button" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 15 )]
+margin_top = 714.0
+margin_right = 209.0
+margin_bottom = 735.0
+
+[node name="Bomberlvl2Button" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 16 )]
+margin_top = 765.0
+margin_right = 209.0
+margin_bottom = 786.0
+
+[node name="NavelUnitsLabel" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 17 )]
+margin_left = 55.0
+margin_top = 816.0
+margin_right = 153.0
+margin_bottom = 837.0
+
+[node name="Iron-CladButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 18 )]
+margin_top = 867.0
+margin_right = 209.0
+margin_bottom = 888.0
+
+[node name="BattleShiplvl1Button" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 19 )]
+margin_top = 918.0
+margin_right = 209.0
+margin_bottom = 939.0
+
+[node name="BattleShiplvl2Button" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 20 )]
+margin_top = 969.0
+margin_right = 209.0
+margin_bottom = 990.0
+
+[node name="FortificationLabel" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 30 )]
+margin_left = 47.0
+margin_right = 162.0
+
+[node name="PreAncientEraTButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 31 )]
+margin_top = 1071.0
+margin_right = 209.0
+margin_bottom = 1092.0
+
+[node name="PreAncientEraCButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 32 )]
+margin_top = 1122.0
+margin_right = 209.0
+margin_bottom = 1143.0
+
+[node name="AncientEraTownButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 33 )]
+margin_top = 1173.0
+margin_right = 209.0
+margin_bottom = 1194.0
+
+[node name="AncientEraCButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 34 )]
+margin_top = 1224.0
+margin_right = 209.0
+margin_bottom = 1245.0
+
+[node name="MedievalEraTownButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 35 )]
+margin_top = 1275.0
+margin_right = 209.0
+margin_bottom = 1296.0
+
+[node name="MedievalEraCButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 36 )]
+margin_top = 1326.0
+margin_right = 209.0
+margin_bottom = 1347.0
+
+[node name="IndustrialEraTownButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 37 )]
+margin_top = 1377.0
+margin_right = 209.0
+margin_bottom = 1398.0
+
+[node name="IndustrialEraCityButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 38 )]
+margin_top = 1428.0
+margin_right = 209.0
+margin_bottom = 1449.0
+
+[node name="ModernEraTownButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 41 )]
+margin_top = 1479.0
+margin_right = 209.0
+margin_bottom = 1500.0
+
+[node name="ModernEraCityButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 42 )]
+margin_top = 1530.0
+margin_right = 209.0
+margin_bottom = 1551.0
+
+[node name="ContemporaryEraTownButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 44 )]
+margin_top = 1581.0
+margin_right = 209.0
+margin_bottom = 1602.0
+
+[node name="ContemporaryEraCityButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 43 )]
+margin_top = 1632.0
+margin_right = 209.0
+margin_bottom = 1653.0
+
+[node name="InformationEraTownButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 46 )]
+margin_top = 1683.0
+margin_right = 209.0
+margin_bottom = 1704.0
+
+[node name="InformationEraCityButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 45 )]
+margin_top = 1734.0
+margin_right = 209.0
+margin_bottom = 1755.0
+
+[node name="BonusLabel" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 47 )]
+margin_left = 68.0
+margin_top = 1785.0
+margin_right = 141.0
+margin_bottom = 1806.0
+
+[node name="WallOfChinaButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 48 )]
+margin_top = 1836.0
+margin_right = 209.0
+margin_bottom = 1857.0
+
+[node name="RomanBonusButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 49 )]
+margin_top = 1887.0
+margin_right = 209.0
+margin_bottom = 1908.0
+
+[node name="BackButton" parent="." instance=ExtResource( 21 )]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 640.0
+margin_top = 600.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectSomeThing" parent="VBoxContainer" instance=ExtResource( 28 )]
+margin_left = 108.0
+margin_top = 0.0
+margin_right = 532.0
+margin_bottom = 21.0
+size_flags_horizontal = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_left = 244.0
+margin_top = 36.0
+margin_right = 395.0
+margin_bottom = 76.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 30
+
+[node name="MinusButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 24 )]
+
+[node name="PlusMinusLabel" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 23 )]
+margin_top = 9.0
+margin_right = 81.0
+margin_bottom = 30.0
+
+[node name="PlusButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 22 )]
+margin_left = 111.0
+margin_right = 151.0
+
+[node name="ResetAllButton" parent="VBoxContainer" instance=ExtResource( 27 )]
+margin_left = 283.0
+margin_top = 91.0
+margin_right = 356.0
+margin_bottom = 112.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 640.0
+margin_top = 140.0
+margin_right = 1280.0
+margin_bottom = 360.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+margin_left = 288.0
+margin_top = 78.0
+margin_right = 352.0
+margin_bottom = 142.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="UnitsTexture" parent="VBoxContainer2/HBoxContainer" instance=ExtResource( 25 )]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_scale = Vector2( 1, 1 )
+texture = ExtResource( 26 )
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Swordman" to="ScrollContainer/VBoxContainer/Swordman" method="_on_Musketter_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/MusketterButton" to="ScrollContainer/VBoxContainer/MusketterButton" method="_on_MusketterButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/InfantryButton" to="ScrollContainer/VBoxContainer/InfantryButton" method="_on_InfantryButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/MechInfantryButton" to="ScrollContainer/VBoxContainer/MechInfantryButton" method="_on_MechInfantryButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/BallistraButton" to="ScrollContainer/VBoxContainer/BallistraButton" method="_on_BallistraButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/CannonButton" to="ScrollContainer/VBoxContainer/CannonButton" method="_on_CannonButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/ArtilleryPieceButton" to="ScrollContainer/VBoxContainer/ArtilleryPieceButton" method="_on_ArtilleryPieceButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Planelvl1Button" to="ScrollContainer/VBoxContainer/Planelvl1Button" method="_on_Planelvl1Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Planelvl2Button" to="ScrollContainer/VBoxContainer/Planelvl2Button" method="_on_Planelvl2Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Bomberlvl1Button" to="ScrollContainer/VBoxContainer/Bomberlvl1Button" method="_on_Bomberlvl1Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Bomberlvl2Button" to="ScrollContainer/VBoxContainer/Bomberlvl2Button" method="_on_Bomberlvl2Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Iron-CladButton" to="ScrollContainer/VBoxContainer/Iron-CladButton" method="_on_IronCladButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/BattleShiplvl2Button" to="ScrollContainer/VBoxContainer/BattleShiplvl2Button" method="_on_BattleShiplvl2Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/MinusButton" to="VBoxContainer/HBoxContainer/PlusMinusLabel" method="_on_MinusButton_pressed"]
+[connection signal="warning" from="VBoxContainer/HBoxContainer/MinusButton" to="VBoxContainer/SelectSomeThing" method="_on_MinusButton_warning"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/PlusButton" to="VBoxContainer/HBoxContainer/PlusMinusLabel" method="_on_PlusButton_pressed"]
+[connection signal="warning" from="VBoxContainer/HBoxContainer/PlusButton" to="VBoxContainer/SelectSomeThing" method="_on_PlusButton_warning"]
